@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  body.dark {
+    @apply bg-dark-bg text-dark-text;
+  }
+
+  /* Custom cursor */
+  .cursor-dot {
+    @apply fixed top-0 left-0 w-2 h-2 rounded-full bg-primary-600 pointer-events-none z-50 mix-blend-difference;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor-outline {
+    @apply fixed top-0 left-0 w-8 h-8 rounded-full border border-primary-600 pointer-events-none z-50 mix-blend-difference;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
+  }
+
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  .dark ::selection {
+    @apply bg-primary-500 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/80 dark:bg-dark-card/80 backdrop-blur-xl border border-gray-200/50 dark:border-dark-border/50;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-purple-600 to-pink-600 animate-gradient-x;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, var(--tw-gradient-stops));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .card-glass {
+    @apply glass rounded-2xl p-6 hover-lift;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-dark-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}
