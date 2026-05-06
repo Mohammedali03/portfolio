@@ -2,8 +2,9 @@
 
 A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
-## 🚀 Tech Stack
+🌐 **Live Demo**: [elidrissi-mohammed-ali-portfolio.netlify.app](https://elidrissi-mohammed-ali-portfolio.netlify.app/)
 
+## 🚀 Tech Stack
 - **React 18** - UI framework
 - **Vite 6** - Build tool
 - **TypeScript** - Type safety
@@ -13,7 +14,6 @@ A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 - **Lenis** - Smooth scrolling
 
 ## ✨ Features
-
 - 🎨 Modern glassmorphism UI design
 - 🌙 Dark/Light theme toggle
 - 📱 Fully responsive
@@ -47,7 +47,6 @@ npm run preview
 
 ## 📁 Project Structure
 
-```
 portfolio/
 ├── public/              # Static assets
 ├── src/
@@ -71,10 +70,10 @@ portfolio/
 ├── tailwind.config.js
 ├── vite.config.ts
 └── tsconfig.json
-```
 
 ## 🔗 Links
 
+- **🌐 Portfolio**: [elidrissi-mohammed-ali-portfolio.netlify.app](https://elidrissi-mohammed-ali-portfolio.netlify.app/)
 - **GitHub**: [https://github.com/Mohammedali03](https://github.com/Mohammedali03)
 - **LinkedIn**: [https://www.linkedin.com/in/mohammed-ali-el-idrissi-008318289](https://www.linkedin.com/in/mohammed-ali-el-idrissi-008318289)
 - **Twitter**: [https://twitter.com/mohammedaliel03](https://twitter.com/mohammedaliel03)
@@ -85,5 +84,4 @@ portfolio/
 MIT License - feel free to use this project as a template!
 
 ---
-
 Built with ❤️ using React, Vite, Tailwind CSS, and Framer Motion
