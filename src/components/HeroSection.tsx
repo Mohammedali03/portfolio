@@ -84,7 +84,7 @@ export function HeroSection() {
           </span>
         </motion.div>
 
-        {/* Avatar */}
+        {/* Avatar / Profile Photo */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -93,9 +93,11 @@ export function HeroSection() {
         >
           <div className="relative inline-block">
             <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-gradient-to-br from-primary-500 via-purple-500 to-pink-500 p-1 animate-gradient-x">
-              <div className="w-full h-full rounded-full bg-white dark:bg-dark-card flex items-center justify-center">
-                <span className="text-4xl sm:text-5xl font-bold gradient-text">MA</span>
-              </div>
+              <img 
+                src="/profile.jpeg" 
+                alt="Mohammed Ali El Idrissi" 
+                className="w-full h-full rounded-full object-cover bg-white dark:bg-dark-card"
+              />
             </div>
             <motion.div
               className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-dark-bg"
